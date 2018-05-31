@@ -1,0 +1,155 @@
+.card{
+
+    // cards Functionality
+    perspective: 100rem;
+    position: relative;
+    height: 52rem;
+
+    &__side{
+        position: absolute;
+        transition: all 1s ease;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        font-size: 2rem;
+        
+
+        &--back{
+            transform: rotateY(180deg);
+    
+            
+            &-1{
+               background-image: $gradient-2;
+                
+            }
+
+            &-2{
+                background-image: $gradient-1;
+            }
+
+            &-3{
+                background-image: $gradient-3
+            }
+
+        }
+
+        
+    }
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    // cards front styling
+
+
+    &__picture{
+        border-radius: 7px;
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background-image: $gradient-2, url(../img/nat-5.jpg);
+        }
+
+        &--2{
+            background-image: $gradient-1, url(../img/nat-6.jpg);
+        }
+
+        &--3{
+            background-image: $gradient-3,  url(../img/nat-7.jpg);
+        }
+        
+    }
+
+    &__heading{
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 65%;
+    }
+    
+    &__heading--span{
+        padding: 1rem 1.3rem;
+        box-decoration-break: clone;
+        
+        &-1{
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85),  rgba($color-secondary-dark, .85));
+        }
+
+        &-2{
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+        }
+
+        &-3{
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+        }
+    }
+
+    &__details{
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2.5rem;
+
+        ul{
+            width:75%;
+            list-style: none;
+            margin: 0 auto;
+            
+        }
+
+        li{
+            padding: 1rem;
+            margin-bottom: 3px solid black;
+
+            &:not(:last-child){
+                border-bottom: .5px solid #e2dede;
+            }
+        }
+    }
+
+    // Back side styling
+    &__pricing{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        &--box{
+            color: #fff;
+            margin-bottom: 8rem;
+
+            &-text{
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            &-value{
+                font-weight: 100;
+                font-size: 6rem;
+            }
+        }
+    }
+}

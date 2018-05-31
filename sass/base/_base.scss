@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 60.5%;
+
+    @include respond(tab-land){
+        font-size: 54.25%;
+    }
+    
+
+    @include respond(tab-port){
+        font-size: 48%;
+    }
+
+    @include respond(big-desktop){
+        font-size: 73%;
+    }
+
+
+}
+
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+    // background-color: red;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+
+}
+::selection{
+    background-color: $color-primary;
+    color: $color-white; 
+}
+
+
