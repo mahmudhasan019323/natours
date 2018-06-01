@@ -15,6 +15,11 @@
     &:hover{
         transform: translateY(-1.5rem) scale(1.06);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+
+        @include respond(tab-port){
+            transform: translateY(0) scale(1);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        }
     }
 
     &__icon{

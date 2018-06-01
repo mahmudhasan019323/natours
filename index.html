@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Natours | Exciting tours for adventurous people</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -81,7 +80,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 about-section__text">
 
                         <h3 class="heading-tertiary u-margin-bottom-small">
                             you're going to fall in love with nature
@@ -173,7 +172,6 @@
                                     <li>2 tour guides</li>
                                     <li>sleep in cozy hotels</li>
                                     <li>difficulty: easy</li>
-                                    <li>&rarr;</li>
                                 </ul>
                             </div>
                         </div>
@@ -356,9 +354,9 @@
             <!-- stories section ends here -->
 
             <section class="booking-section">
-                <div class="row">
-                    <div class="book">
-                        <div class="book__from">
+                <div class="booking__container">
+                    <div class="booking">
+                        <div class="booking__from">
                             <form action="#" class="form">
                                 <div class="u-margin-bottom-medium">
                                     <h2 class="heading-secondary">start booking now</h2>
@@ -435,6 +433,15 @@
 
 
         <script src="js/script.js"></script>
+        <!-- <script>
+            var x = document.querySelectorAll('a');
+
+            x.forEach(function(y){
+                y.addEventListener('click', function(e){
+                    e.preventDefault();
+                })
+            })
+        </script> -->
 
 </body>
 </html>

@@ -12,20 +12,39 @@
         font-size: $default-font-size;
         outline: none;
         border: none;
+
+        @include respond(tab-port){
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
     }
     
     &:hover{
         transform: translateY(-3px) scale(1.1);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
+        @include respond(tab-port){
+            transform: translateY(-3px) scale(1);
+        }
+
         &::after{
-            transform: scalex(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
+
+            @include respond(tab-port){
+                opacity: 1;
+                transform: scaleX(1) scaleY(1);
+            }
         }
     }
     &:active {
         transform: translateY(1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2); 
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        border-radius: 10rem;
+
+        @include respond(tab-port){
+            transform: translateY(3px);
+
+        }
     }
     
     &--white{
@@ -38,12 +57,10 @@
     }
 
     &-primary{
-        // background-image: $gradient-1;
-        background-color: $color-primary;
         color:#fff;
+        background-color: $color-primary;
 
         &::after{
-            // background-image: $gradient-1;
             background-color: $color-primary; 
         }
 
@@ -79,20 +96,30 @@
             padding: 10px;
             font-size: $default-font-size;
             transition: all .5s;
-            // font-weight: 700;
         }
         
         &:hover{
             background-color: $color-primary;
             color: $color-white;
-            
             box-shadow: 0 1rem 2rem rgba($color-black, .2);
             transform: translateY(-4px) scale(1.1);
+
+            @include respond(tab-port){
+                background-color: transparent;
+                color: $color-primary;
+                box-shadow: none;
+                transform: translateY(0) scale(1);
+            }
         }
 
         &:active{
             transform: translateY(1px);
             box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+
+            @include respond(tab-port){
+                background-color: $color-primary;
+                color: #fff;
+            }
         }
     }
 

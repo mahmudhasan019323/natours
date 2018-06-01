@@ -28,12 +28,10 @@ html{
 body {
     padding: 3rem;
     box-sizing: border-box;
-    // background-color: red;
-
+    
     @include respond(tab-port){
         padding: 0;
     }
-
 }
 ::selection{
     background-color: $color-primary;
