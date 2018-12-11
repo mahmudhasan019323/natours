@@ -7,7 +7,7 @@
 }
 
 html{
-    font-size: 60.5%;
+    font-size: 60.5%; 
 
     @include respond(tab-land){
         font-size: 54.25%;
@@ -26,7 +26,7 @@ html{
 }
 
 body {
-    padding: 3rem;
+    padding: 2rem;
     box-sizing: border-box;
     
     @include respond(tab-port){
@@ -36,6 +36,33 @@ body {
 ::selection{
     background-color: $color-primary;
     color: $color-white; 
+}
+
+
+body::-webkit-scrollbar{
+    width: 1.3rem;
+    border-radius: 20px;
+
+    &-thumb{
+        // background: $color-secondary-light;
+        background: $gradient-3;
+        border-radius: 20px;
+
+        &:hover{
+            // background: $color-primary-light;
+            background: $color-tertiary-light
+        }
+
+        &:active{
+            background: $color-tertiary-dark
+        }
+    }
+
+    &-track{
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.288);
+        border-radius: 20px;
+        // background: $color-primary
+    }
 }
 
 

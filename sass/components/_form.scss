@@ -2,6 +2,10 @@
 
     width: 50%;
 
+    @include respond(tab-land){
+        width: 60%;
+    }
+
     @include respond(phone){
         width: 100%;
     }
@@ -56,7 +60,6 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
-        // background: #000;
     }
     
 

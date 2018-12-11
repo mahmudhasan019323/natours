@@ -114,7 +114,7 @@
     
 
     &__checkbox:checked ~ &__bg{
-        transform: scale(70)
+        transform: scale(70);
     }
 
     &__checkbox:checked ~ &__nav{
